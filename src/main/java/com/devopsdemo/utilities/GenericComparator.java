@@ -14,6 +14,7 @@ import java.util.Date;
 * 
 * This is an adaptation of a genenic comparator found on github linked from myjeeva.com 
 * Many thanks for the code!
+* But, this is so confusing <--jmoj
 */
 
 @SuppressWarnings("rawtypes")
