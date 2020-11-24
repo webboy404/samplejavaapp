@@ -3,7 +3,7 @@ package com.devopsdemo.helper;
 import java.util.Enumeration;
 import java.util.ResourceBundle;
 /*
-   Please add comments here
+   Please add comments here. Add more comments to trigger builds.
 */
 public class GenericResourceBundle {
 	public static String getProperties(String source){
