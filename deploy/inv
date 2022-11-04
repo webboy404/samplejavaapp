@@ -1,8 +1,7 @@
-[qa]
-ip1
-ip2
-
-[prod]
-ip1
-ip2
-
+localhost
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=ssh
+ansible_user=ansibles
+ansibles_password=ansible@123
+ansibles_ssh_common_args='-o StrictHostKeyChecking=no'
