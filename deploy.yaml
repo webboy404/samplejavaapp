@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  become: true
+  become_user: root
+
+  tasks:
+  - name: Start docker
+    service: name=docker state=started
+
+  - name: create docker image using war file
+    command: docker build -t myproject:CICD .
+    args:
+      chdir: /opt/myproject
+
+  - name: create tag to image
+    command: docker tag myproject:CICD yann1/myproject:CICD
+
+  - name: loginto docker
+    command: docker login --username TCHUISE1 --password 07122000TYV
+
+  - name: push image on to dockerhub
+    command: docker push yann1/myproject:CICD
+    
+  - name: Do deployment in Docker Swarm cluster
+    command: docker service create --name mysvc-ansibles --replicas 1 -p 8282:8080 yann1/myproject:CICD
