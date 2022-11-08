@@ -16,7 +16,7 @@
     command: docker tag myproject:CICD yann1/myproject:CICD
 
   - name: loginto docker
-    command: docker login --username TCHUISE1 --password 07122000TYV
+    command: docker login --username tchuise1 --password 07122000TYV
 
   - name: push image on to dockerhub
     command: docker push yann1/myproject:CICD
