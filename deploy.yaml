@@ -1,5 +1,5 @@
 ---
-- hosts: 20.205.59.53
+- hosts: localhost
   become: true
   
   
