@@ -23,7 +23,7 @@
     ignore_errors: yes
     
   - name: push image on to dockerhub
-    command: docker image push yann1/myproject:CICD
+    command: docker push yann1/myproject:CICD
 
   - name: Do deployment in Docker Swarm cluster
     command: docker service create --name mysvc-ansibles --replicas 1 -p 8282:8080 yann1/myproject:CICD
