@@ -17,7 +17,11 @@
 
   - name: loginto docker
     command: docker login --username tchuise1 --password 07122000TYV
-
+    
+  - name: remove docker images form ansible server
+    command: docker rmi myproject:CICD yann1/myproject:CICD
+    ignore_errors: yes
+    
   - name: push image on to dockerhub
     command: docker image push yann1/myproject:CICD
 
