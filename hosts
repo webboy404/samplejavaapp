@@ -1,4 +1,4 @@
-localhost
+20.205.59.53
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_connection=ssh
